@@ -1,0 +1,36 @@
+<mat-card class="purchase-voucher-card">
+    <div>
+        <mat-card>
+            <div class="title">
+                <span><b>€ 50.00</b></span>
+                <span><b>Cash in voucher</b></span>
+                <span>Valid for: <b>24 hours</b></span>
+            </div>
+            <div class="info">
+                <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut commodo lorem, quis pulvinar leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i>
+            </div>
+            <button mat-raised-button type="button" (click)="onClickHandler()">PURCHASE VOUCHER</button>
+        </mat-card>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut commodo lorem, quis pulvinar leo.
+        </div>
+        <div><b>Find a location</b></div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <!-- Name and address Column -->
+            <ng-container matColumnDef="nameAndAddress">
+            <th mat-header-cell *matHeaderCellDef> Name and address </th>
+            <td mat-cell *matCellDef="let element"> {{element.nameAndAddress}} </td>
+            </ng-container>
+        
+            <!-- Opening hours Column -->
+            <ng-container matColumnDef="openingHours">
+            <th mat-header-cell *matHeaderCellDef> Opening hours </th>
+            <td mat-cell *matCellDef="let element"> {{element.openingHours}} </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>     
+        
+    </div>
+</mat-card>

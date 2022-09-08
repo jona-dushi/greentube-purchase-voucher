@@ -1,0 +1,13 @@
+.login-card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .form-content  {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+    }
+}
